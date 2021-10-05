@@ -1,0 +1,24 @@
+<%- include("../partials/header") %>
+
+<div class="container-fluid">
+<!-- <div class="card"> -->
+
+  <br>
+  <% for(let cluck of list) { %> 
+    <div class="card" style="width: 18rem;">
+      <nav class="nav justify-content-left">
+        <ul>
+          <img src="/images/image8.jpeg" class="rounded-circle rounded float-start" class="d-inline-block align-top"  width="30" height="30" alt="img">
+        </ul>
+                
+        </nav>
+        <p class="card-text"><%=cluck.content%></p>
+                  <!-- <a href="cluck/single_cluck" class="btn btn-outline-secondary">cluck<%= cluck.id%></a> -->
+        </div>
+      </div>
+      </div>
+  <br>
+<% } %> 
+<br>
+
+<%- include("../partials/footer.ejs") %>
