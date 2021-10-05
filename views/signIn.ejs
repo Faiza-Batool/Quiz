@@ -1,0 +1,18 @@
+<%- include("./partials/header") %>
+
+<div class="container-fluid">
+<form action="/cluck/clucks">
+  <div class="card" style="width: 18rem;">
+      <label for="Input1" class="card-body"><%=username%></label>
+
+        <form action="/sign_in" method="POST" class='form-inline'>
+          <input name='username' placeholder='e.g. Madam Welminister'>
+          <br>
+          <button type='submit' class='btn btn-outline-secondary'>Sign In</button>
+        </form>
+        <br>
+  </div>
+    <br>
+</div>
+</form>
+<%- include("./partials/footer.ejs") %>

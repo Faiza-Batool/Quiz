@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <title>cluckr</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand  me-2 mb-2 mb-lg-0 justify-content-between navbar-light bg-light" >
+        
+    <ul class="nav ">
+            <img src="/images/chicken.png" width="40" height="50" alt="Chicken">
+        </ul>
+        <ul class="nav">
+
+            
+              <form action="" method="POST">
+                <a link = "" type="submit" class='btn btn-secondary'>Cluck</a>
+              </form>
+
+              <% if (username) { %>
+                <li>
+                  <span><%- username %>!</span>
+                  <form action="/sign_out" method="POST">
+                    <button type="submit" class='btn btn-secondary'>Sign Out</button>
+                  </form>
+                </li>
+              <% } else { %>
+              <li>
+                <form action="/sign_in" method="POST" class='form-inline'>
+                  <div><%-username%></div>
+                  <button type='submit' class='btn btn-secondary'>Sign In</button>
+                </form>
+              </li> 
+              <% } %>
+            </nav>
+            
+            <!-- <a href="/sign_in" class='btn btn-outline-dark'>Sign In</a>
+    
+            <a href="/cluck" class="nav-link">Cluck!</a> -->
+        </ul>
+    </nav>

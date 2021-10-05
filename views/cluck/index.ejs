@@ -1,0 +1,29 @@
+<%- include("../partials/header") %>
+ 
+
+<!-- <div class="border"> -->
+<br>
+    <% for(let cluck of data) { %> 
+        <div class="container">
+            <div class="card" style="width: 18rem;" >
+                <div class="card-body">
+                    <nav class="nav justify-content-left">
+                        <ul>
+                            <img src="<%-cluck.imageUrl%>" class="rounded-circle" class="rounded float-start" class="d-inline-block align-top"  width="30" height="30" alt="img">
+                        </ul>
+                        <ul> 
+                            <h5><%=cluck.title%> </h5> 
+                        </ul> 
+                    </nav>
+                
+                    <p class="card-text"><%=cluck.content%></p>
+                    <a href="/cohorts/<%= cluck.id%>" class="btn btn-primary">Show Cohort</a>
+                </div>
+            </div>
+        </div>
+    <br>
+  <% } %> 
+<br>
+
+
+<%- include("../partials/footer.ejs") %>
